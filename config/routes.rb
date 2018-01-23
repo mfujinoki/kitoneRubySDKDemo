@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  get '/inquiries', to: 'inquiries#new'
+  post '/inquiries', to: 'inquiries#create'
+  resources :inquiries
 
-  get '/contact', to: 'contacts#new'
-  post '/contact', to: 'contacts#create'
-  resources :queries
-
-  root 'contacts#new'
+  root 'inquiries#new'
 end
