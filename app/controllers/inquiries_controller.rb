@@ -15,7 +15,7 @@ class InquiriesController < ApplicationController
       # Use Hash
       app = 103
       record = {"Customer" => {"value" => inquiry_params[:company_name]},
-                "client_name" => {"value" => inquiry_params[:client_name]},
+                "Customer_name" => {"value" => inquiry_params[:client_name]},
                 "QType" => {"value" => inquiry_params[:contact_type]},
                 "Detail" => {"value" => inquiry_params[:details]}
                 }
