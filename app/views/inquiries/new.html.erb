@@ -1,5 +1,5 @@
 <h1>お問い合わせ</h1>
-<%= form_with scope: :inquiry, url: inquiries_path, local: true do |form| %>
+<%= form_for :inquiry, url: inquiries_path do |form| %>
   <p>
     <%= form.label :company_name, "会社名:" %><br>
     <%= form.text_field :company_name %>
