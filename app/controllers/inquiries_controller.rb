@@ -1,5 +1,5 @@
+require 'kintone'
 class InquiriesController < ApplicationController
-
   def new
   end
 
@@ -10,10 +10,9 @@ class InquiriesController < ApplicationController
 
       # Use token authentication
       api = Kintone::Api.new("devxorudc.cybozu.com", "rBoD1vaqme5y5ezC38MVWdpoUAilIUYP4Rs8OwIO")
-
+      app = 103
       # Record register(single record)
       # Use Hash
-      app = 103
       record = {"Customer" => {"value" => inquiry_params[:company_name]},
                 "Customer_name" => {"value" => inquiry_params[:client_name]},
                 "QType" => {"value" => inquiry_params[:contact_type]},
